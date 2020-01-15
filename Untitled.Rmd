@@ -11,7 +11,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Import data and load packages
 ```{r}
-read_csv("~/UCL/R Lessons/Dr Cooper Workshop/limpet.csv")
+limpet <- read_csv("~/UCL/R Lessons/Dr Cooper Workshop/limpet.csv")
 library(tidyverse)
 ```
+
+Visualise the data 
+```{r}
+ggplot(limpet, aes(x = DENSITY, y = EGGS, colour = SEASON)) +
+  geom_point(alpha = 0.8, size = 2.5) +
+  scale_colour_manual(values = c("forestgreen", "tomato3")) +
+  theme_bw()
+```
+
+Visualising data differently 
+```{r}
+ggplot(limpet, aes(x = DENSITY, y = EGGS, fill = SEASON)) +
+  geom_boxplot() +
+  theme_bw()
+```
+
+
 
