@@ -5,13 +5,15 @@ date: "1/15/2020"
 output: html_document
 ---
 
+FOOL OF A TOOK
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Import data and load packages
 ```{r}
-limpet <- read_csv("~/UCL/R Lessons/Dr Cooper Workshop/limpet.csv")
+limpet <- read.csv("~/UCL/R Lessons/Dr Cooper Workshop/limpet.csv")
 library(tidyverse)
 ```
 
